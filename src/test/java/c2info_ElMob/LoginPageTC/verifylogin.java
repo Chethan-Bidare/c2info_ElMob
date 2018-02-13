@@ -28,16 +28,19 @@ public class verifylogin extends TestBase{
 	@Test(priority=1)
 	public void tabcheck() throws InterruptedException{
 		HomePage hp = new HomePage(driver);
-		hp.tapOnPurchaseTab();
-		hp.tapOnMyStoreTab();
-		hp.tapOnSalesTab();
-		hp.selectSalesreturnCheckbox();
-		hp.selectSalesCheckbox();
-		hp.enterCustomerName("v");
+		//hp.tapOnPurchaseTab();
+		//hp.tapOnMyStoreTab();
+		//hp.tapOnSalesTab();
+		//hp.selectSalesreturnCheckbox();
+		//hp.selectSalesCheckbox();
+		//hp.enterCustomerName("v");
 		hp.tapOnStartButton();
+		hideKeyboard();
 		Thread.sleep(2000);
-		Sales sales = new Sales();
-		sales.getItemName();
+		Sales sales = new Sales(driver);
+		//sales.tapOnTabOptionsInSales("Old invoice");
+		sales.selectItemByName("321321");
+		sales.selectBatchByName("123");
 	}
 	
 }

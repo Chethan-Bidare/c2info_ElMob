@@ -31,5 +31,9 @@ public class TestBase {
 		
 		
 	}
+	
+	public void hideKeyboard(){
+		driver.hideKeyboard();
+	}
 
 }
