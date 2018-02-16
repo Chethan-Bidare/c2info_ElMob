@@ -7,6 +7,7 @@
         <methods>
           <include name="tabcheck"/>
           <include name="openAPP"/>
+          <include name="login"/>
         </methods>
       </class> <!-- c2info_ElMob.LoginPageTC.verifylogin -->
     </classes>
