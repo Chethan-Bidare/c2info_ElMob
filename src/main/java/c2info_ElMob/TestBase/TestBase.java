@@ -7,12 +7,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 
 public class TestBase {
 
 	public static AndroidDriver<WebElement> driver ;
-	
+	TouchAction touchAction = new TouchAction(driver);
 	
 	
 	
@@ -34,6 +35,10 @@ public class TestBase {
 	
 	public void hideKeyboard(){
 		driver.hideKeyboard();
+	}
+	
+	public void swipeUpInBatchList(){	
+		touchAction.longPress(390,670).moveTo(390,430).release().perform();
 	}
 
 }

@@ -26,7 +26,7 @@ public class verifylogin extends TestBase{
 	}
 	
 	@Test(priority=1)
-	public void tabcheck() throws InterruptedException{
+	public void tabcheck() throws InterruptedException {
 		HomePage hp = new HomePage(driver);
 		//hp.tapOnPurchaseTab();
 		//hp.tapOnMyStoreTab();
@@ -39,8 +39,15 @@ public class verifylogin extends TestBase{
 		Thread.sleep(2000);
 		Sales sales = new Sales(driver);
 		//sales.tapOnTabOptionsInSales("Old invoice");
-		sales.selectItemByName("321321");
-		sales.selectBatchByName("123");
+		sales.searchByItemName("A Gen 5 D data");
+		Thread.sleep(2000);
+		sales.clickOnSearchedItem();
+		hideKeyboard();
+		/*Thread.sleep(3000);
+		sales.increaseQty(4);
+		hideKeyboard();*/
+		swipeUpInBatchList();
+		System.out.println(sales.getBatchesWithPrice());
 	}
 	
 }
