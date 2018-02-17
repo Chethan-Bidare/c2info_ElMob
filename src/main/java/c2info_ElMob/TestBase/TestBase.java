@@ -39,7 +39,7 @@ public class TestBase {
 		
 		Dimension size = driver.manage().window().getSize();
 		int startx = size.width / 2 ;
-		int starty = (int) (size.height * 0.8) ;
+		int starty = (int) (size.height * 0.6) ;
 		int endy = (int) (size.height * 0.2) ;
 		driver.swipe(startx, starty, startx, endy, 3000);
 		/*touchAction.longPress(390,670).moveTo(390,430).release().perform();*/

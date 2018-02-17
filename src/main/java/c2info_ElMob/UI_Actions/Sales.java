@@ -49,6 +49,9 @@ public class Sales extends TestBase{
 	@FindBy(id="com.c2info.ecolite:id/text_add_from_liveconnect")
 	WebElement loadBatchFromLiveConnect;
 	
+	@FindBy(xpath=".//*[@class='android.widget.FrameLayout' and @index=0]")
+	WebElement searchedCustomerName;
+	
 	/*@FindBy(id="com.c2info.ecolite:id/radio_new_sale")
 	WebElement salescheckbox
 	
@@ -84,18 +87,7 @@ public class Sales extends TestBase{
 	
 	@FindBy(id="com.c2info.ecolite:id/radio_new_sale")
 	WebElement salescheckbox
-	
-	@FindBy(id="com.c2info.ecolite:id/radio_new_sale")
-	WebElement salescheckbox
-	*
-	*
-	*
-	*
-	*
-	*
-	*
-	*
-	*
+
 	*/
 	
 	public ArrayList<String> getItemName(){
@@ -178,6 +170,16 @@ public class Sales extends TestBase{
 		
 	}
 	
+	public void searchByCustomerName(String custName){
+		itemSearch.clear();
+		itemSearch.sendKeys(custName);
+		
+	}
+	
+	public void clickOnSearchedCustomer(){
+		searchedCustomerName.click();
+	}
+	
 	public void selectBatchByName(String batchNo){
 		
 		touchAction.tap(driver.findElementByName(""+batchNo+""));
@@ -195,10 +197,10 @@ public class Sales extends TestBase{
 		//driver.findElementByXPath(".//*[@class='android.widget.TextView' and @text='"+itemName+"')]").click();
 		
 		
-		List<WebElement> itemList = driver.findElementsById("com.c2info.ecolite:id/lLytItem");
+		/*List<WebElement> itemList = driver.findElementsById("com.c2info.ecolite:id/lLytItem");
 		for(WebElement we : itemList){
 			
-		}
+		}*/
 		
 	}
 	

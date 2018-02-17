@@ -34,7 +34,7 @@ public class LoginPage extends TestBase{
 		this.userid.sendKeys(userid);
 		this.password.sendKeys(password);
 		signinButton.click();
-		Thread.sleep(30000);
+		Thread.sleep(50000);
 	}
 	
 	
