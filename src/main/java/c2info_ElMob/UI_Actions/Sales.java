@@ -174,10 +174,12 @@ public class Sales extends TestBase{
 		itemSearch.clear();
 		itemSearch.sendKeys(custName);
 		
+		
 	}
 	
 	public void clickOnSearchedCustomer(){
-		searchedCustomerName.click();
+		touchAction.tap(searchedCustomerName).perform();
+		driver.findElementById("com.c2info.ecolite:id/textview_name").click();
 	}
 	
 	public void selectBatchByName(String batchNo){

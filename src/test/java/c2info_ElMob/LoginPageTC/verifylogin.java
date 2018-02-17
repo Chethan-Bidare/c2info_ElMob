@@ -47,6 +47,7 @@ public class verifylogin extends TestBase{
 		sales.searchByCustomerName("veena");
 		Thread.sleep(3000);
 		sales.clickOnSearchedCustomer();
+		Thread.sleep(3000);
 		sales.searchByItemName("A Gen 5 D data");
 		Thread.sleep(2000);
 		sales.clickOnSearchedItem();
